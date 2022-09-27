@@ -630,7 +630,8 @@ int main(int argc, char** argv) {
 
         app.viewer->setUiCallback([&app, scene, view, engine] () {
             auto& automation = *app.automationEngine;
-
+			ImGui::SetWindowFontScale(2.0f);
+			
             if (ImGui::IsMouseClicked(ImGuiMouseButton_Left)) {
                 ImVec2 pos = ImGui::GetMousePos();
                 pos.x -= app.viewer->getSidebarWidth();

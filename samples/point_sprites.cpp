@@ -189,6 +189,7 @@ void animate(App& app, Engine* engine, View* view, double now) {
 int main(int argc, char** argv) {
     Config config;
     config.title = "point_sprites";
+    config.backend = Engine::Backend::OPENGL;
 
     App app;
     FilamentApp::get().animate([&app](Engine* e, View* v, double now) { animate(app, e, v, now); });

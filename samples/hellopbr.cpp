@@ -52,7 +52,8 @@ int main(int argc, char** argv) {
     Config config;
     config.title = "hellopbr";
     config.iblDirectory = FilamentApp::getRootAssetsPath() + IBL_FOLDER;
-
+	config.backend = Engine::Backend::OPENGL;
+	   
     App app;
     auto setup = [config, &app](Engine* engine, View* view, Scene* scene) {
         auto& tcm = engine->getTransformManager();
