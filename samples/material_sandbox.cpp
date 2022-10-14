@@ -506,9 +506,11 @@ static void popSliderColors() { ImGui::PopStyleColor(4); }
 
 static void gui(filament::Engine* engine, filament::View*) {
     auto& params = g_params;
+    
     ImGui::SetNextWindowSize(ImVec2(0.0f, 0.0f));
     ImGui::Begin("Parameters");
-    {
+    {   
+        ImGui::SetWindowFontScale(2.0f);
         if (ImGui::CollapsingHeader("Material", ImGuiTreeNodeFlags_DefaultOpen)) {
             ImGui::Indent();
             ImGui::Combo("Model", &params.currentMaterialModel,
